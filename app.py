@@ -328,5 +328,5 @@ def main():
                 ax.set_ylabel("Accuracy (%)")
                 st.pyplot(fig)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
