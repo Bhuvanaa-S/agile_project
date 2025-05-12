@@ -568,8 +568,4 @@ if uploaded_file:
             accuracy_scores["Deep Neural Network"] = accuracy * 100
 
         if accuracy_scores:
-<<<<<<< HEAD
             display_model_comparison(accuracy_scores)
-=======
-            display_model_comparison(accuracy_scores)
->>>>>>> 5b135de8f50bfb0569ade50420a3eab83228a65b
