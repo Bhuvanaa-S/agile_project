@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streamlit-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: streamlit-app
+  template:
+    metadata:
+      labels:
+        app: streamlit-app
+    spec:
+      containers:
+        - name: streamlit
+          image: bhuvanas118/multi-model-classifier-app:latest
+          ports:
+            - containerPort: 8501
+          resources:
+            limits:
+              memory: "1Gi"
+              cpu: "500m"
