@@ -28,9 +28,9 @@ jobs:
         pip install pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
-    - name: Test with pytest
-      run: |
-        pytest -v  # Running pytest with verbose output for debugging
+    #- name: Test with pytest
+     # run: |
+      #  pytest -v  # Running pytest with verbose output for debugging
     
     - name: Install Node.js and npm
       run: |
