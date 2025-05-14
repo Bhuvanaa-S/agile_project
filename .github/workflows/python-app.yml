@@ -28,13 +28,18 @@ jobs:
         pip install pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
+    - name: Test with pytest
+      run: |
+        pytest -v  # Running pytest with verbose output for debugging
+    
+    - name: Install Node.js and npm
+      run: |
+        curl -sL https://deb.nodesource.com/setup_16.x | bash -
+        sudo apt-get install -y nodejs
+
     - name: Install Vercel CLI
       run: |
-        curl -sL https://github.com/vercel/vercel-action/releases/latest/download/install.sh | bash
-
-    - name: Verify Vercel CLI installation
-      run: |
-        vercel --version
+        npm install -g vercel
     
     - name: Deploy to Vercel
       run: |
